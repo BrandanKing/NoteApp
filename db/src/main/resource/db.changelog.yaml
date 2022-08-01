@@ -1,0 +1,13 @@
+databaseChangeLog:
+    -   include:
+            file: /scripts/db.2nqba7n_changelog.sql
+            relativeToChangelogFile: true
+    -   include:
+            file: /scripts/db.2nqba7w_changelog.sql
+            relativeToChangelogFile: true
+    -   include:
+            file: /scripts/db.2nqbagx_changelog.sql
+            relativeToChangelogFile: true
+    -   include:
+            file: /scripts/db.2nqbaha_changelog.sql
+            relativeToChangelogFile: true

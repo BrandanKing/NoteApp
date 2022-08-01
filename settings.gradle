@@ -1,0 +1,3 @@
+rootProject.name = 'NoteApp'
+
+include 'tech:container:notes-container', 'auth:auth-api', 'auth:auth-impl', 'db'

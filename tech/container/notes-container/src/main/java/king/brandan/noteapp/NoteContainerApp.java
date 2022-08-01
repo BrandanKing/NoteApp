@@ -1,0 +1,13 @@
+package king.brandan.noteapp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class NoteContainerApp {
+
+	public static void main(String[] args) {
+		SpringApplication.run(NoteContainerApp.class, args).start();
+	}
+
+}
