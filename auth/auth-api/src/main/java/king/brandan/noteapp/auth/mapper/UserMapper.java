@@ -1,14 +1,15 @@
 package king.brandan.noteapp.auth.mapper;
 
-import king.brandan.noteapp.auth.dto.UserDto;
+import king.brandan.noteapp.auth.dto.UserRequest;
+import king.brandan.noteapp.auth.dto.UserResponse;
 import king.brandan.noteapp.auth.entities.UserEntity;
 import org.springframework.stereotype.Component;
 
 @Component
 public class UserMapper {
 
-	public UserDto toDto(UserEntity userEntity) {
-		return UserDto.builder()
+	public UserResponse toResponse(UserEntity userEntity) {
+		return UserResponse.builder()
 			.id(userEntity.getId())
 			.email(userEntity.getEmail())
 			.username(userEntity.getUsername())
@@ -16,11 +17,11 @@ public class UserMapper {
 			.build();
 	}
 
-	public UserEntity toEntity(UserDto userDto) {
+	public UserEntity toEntity(UserRequest userRequest) {
 		return UserEntity.builder()
-			.email(userDto.getEmail())
-			.username(userDto.getUsername())
-			.role(userDto.getRole())
+			.email(userRequest.getEmail())
+			.username(userRequest.getUsername())
+			.password(userRequest.getPassword())
 			.build();
 	}
 
