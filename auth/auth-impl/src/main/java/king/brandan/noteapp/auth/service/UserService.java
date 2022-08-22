@@ -9,6 +9,7 @@ import king.brandan.noteapp.auth.repositories.RoleRepository;
 import king.brandan.noteapp.auth.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class UserService {
 	private final UserRepository userRepository;
 	private final RoleRepository roleRepository;
 	private final UserMapper userMapper;
-	// private final PasswordEncoder passwordEncoder;
+	private final PasswordEncoder passwordEncoder;
 
 	public List<UserResponse> getAllUsers() {
 		log.info("Fetching all users");
@@ -39,7 +40,7 @@ public class UserService {
 		log.info("Saving user {}", userDto);
 		UserEntity userEntity = userMapper.toEntity(userDto);
 		RoleEntity roleEntity = roleRepository.findByCode("USER");
-		// userEntity.setPassword(passwordEncoder.encode(userEntity.getPassword()));
+		userEntity.setPassword(passwordEncoder.encode(userEntity.getPassword()));
 		userEntity.setRole(roleEntity);
 		userRepository.save(userEntity);
 	}

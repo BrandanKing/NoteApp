@@ -37,7 +37,8 @@ public class UserController implements UserRestApi {
 	}
 
 	@Override
-	public ResponseEntity<UserResponse> deleteUser(long id) {
-		return null;
+	public ResponseEntity<String> deleteUser(long id) {
+		userService.deleteUser(id);
+		return ResponseEntity.noContent().build();
 	}
 }

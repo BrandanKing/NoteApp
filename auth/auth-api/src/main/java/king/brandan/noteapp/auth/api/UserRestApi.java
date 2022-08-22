@@ -49,6 +49,6 @@ public interface UserRestApi {
 	 * @return The deleted user.
 	 */
 	@DeleteMapping("/v1/users/{id}")
-	ResponseEntity<UserResponse> deleteUser(@Valid @PathVariable long id);
+	ResponseEntity<String> deleteUser(@Valid @PathVariable long id);
 
 }
