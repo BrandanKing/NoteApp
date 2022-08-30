@@ -1,8 +1,4 @@
 
-G
-db/liquibase.properties,7\c\7cb42f63206fc3fb193459ee6e24c9eff6b379e5
-?
-db/build.gradle,d\9\d9c31db3379579d5a92445e95f1ffbdb069bc8ff
 †
 Vauth/auth-api/src/main/java/king/brandan/noteapp/auth/repositories/RoleRepository.java,2\c\2c564096050a77fc81536b22718143372befe252
 e
@@ -19,7 +15,5 @@ Lauth/auth-api/src/main/java/king/brandan/noteapp/auth/mapper/UserMapper.java,b
 Vauth/auth-api/src/main/java/king/brandan/noteapp/auth/repositories/UserRepository.java,9\9\99eed1afa3838492ca58223925894b8f9f23c852
 z
 Jauth/auth-api/src/main/java/king/brandan/noteapp/auth/dto/AuthRequest.java,a\8\a8e84a0c2b25129b350447dea4c9d876d574dbdb
-K
-auth/auth-impl/build.gradle,5\f\5f804c3071d5ed11f8db679bf1ede2e970ba7905
 J
 auth/auth-api/build.gradle,a\5\a547c84335b34a7e2c5f46b4eeeb5ccc7994a86d
